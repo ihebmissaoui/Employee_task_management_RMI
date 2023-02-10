@@ -6,8 +6,8 @@ public class Server {
         try {
             
             LocateRegistry.createRegistry(1099);//Because with running with default port i think it's used
-            Hello obj = new HelloImpl();
-            Naming.rebind("localhost/Hello", obj);
+            EmployeeCRUD empCRUD = new EmployeeCRUDImpl();
+            Naming.rebind("localhost/EmployeeCRUD", empCRUD);
             System.out.println("Server Ready");
         } catch (Exception e) {
             System.out.println("Server Error: " + e);
