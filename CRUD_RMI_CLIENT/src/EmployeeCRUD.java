@@ -9,7 +9,4 @@ public interface EmployeeCRUD extends Remote {
     public String addEmployee(Employee employee) throws RemoteException;
     public String updateEmployee(String id,Employee employee) throws RemoteException;
     public String deleteEmployee(String id) throws RemoteException;
-
-
-
 }

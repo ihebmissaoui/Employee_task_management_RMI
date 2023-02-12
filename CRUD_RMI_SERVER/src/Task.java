@@ -1,12 +1,14 @@
-package models;
-
+@Entity
+@Table(name="task")
 public class Task {
+    @Id
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
     private String id;
     private String description ;
-    private String idEmployee;
-    public Task(String description, String idEmployee) {
+    private Employee employee;
+    public Task(String description, Employee employee) {
         this.description = description;
-        this.idEmployee = idEmployee;
+        this.employee = employee;
     }
     public String getId() {
         return id;
@@ -20,10 +22,10 @@ public class Task {
     public void setDescription(String description) {
         this.description = description;
     }
-    public String getIdEmployee() {
-        return idEmployee;
+    public Employee getIdEmployee() {
+        return employee;
     }
-    public void setIdEmployee(String idEmployee) {
-        this.idEmployee = idEmployee;
+    public void setIdEmployee(Employee employee) {
+        this.employee = employee;
     }
 }

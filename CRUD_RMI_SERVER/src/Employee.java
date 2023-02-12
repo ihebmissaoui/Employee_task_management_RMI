@@ -1,7 +1,11 @@
-package models;
 
+import org.hibernate.annotations.Entity;
+
+@Entity
+@Table(name="employee")
 public class Employee {
-    
+    @Id
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
     private String id;
     private String firstName;
     private String lastName;
@@ -9,6 +13,9 @@ public class Employee {
     private String accountName;
     private String grade;
     private Employee master;
+    public Employee() {
+        
+    }
     public Employee(String firstName, String lastName, String address, String accountName, String grade,
             Employee master) {
         this.firstName = firstName;
