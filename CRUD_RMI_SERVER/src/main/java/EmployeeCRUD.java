@@ -1,7 +1,6 @@
 import java.rmi.Remote;
 import java.rmi.RemoteException;
 
-import models.Employee;
 
 public interface EmployeeCRUD extends Remote {
     public String showEmployees() throws RemoteException;

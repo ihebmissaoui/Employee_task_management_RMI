@@ -1,7 +1,6 @@
 import java.rmi.Remote;
 import java.rmi.RemoteException;
 
-import models.Task;
 
 public interface TaskCRUD extends Remote {
     public String showTasks() throws RemoteException;

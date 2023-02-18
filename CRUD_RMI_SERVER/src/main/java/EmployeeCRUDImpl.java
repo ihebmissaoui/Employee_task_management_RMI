@@ -1,7 +1,6 @@
 import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
 
-import models.Employee;
 
 public class EmployeeCRUDImpl extends UnicastRemoteObject implements EmployeeCRUD {
     public EmployeeCRUDImpl() throws RemoteException {
